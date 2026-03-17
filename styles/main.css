@@ -118,3 +118,13 @@ a:hover {
   font-size: 13px;
   color: var(--muted);
 }
+
+/* Update this selector to change the visual size */
+section#home div.profile img.avatar-small {
+  /* Set a specific width for the image */
+  width: 250px; 
+
+  /* Setting only one dimension (width OR height) to keep aspect ratio */
+  /* If you set both width and height, you might stretch or squash the picture */
+  height: auto; 
+}
