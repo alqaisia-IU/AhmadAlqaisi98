@@ -4,14 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ahmad Alqaisi — Personal website</title>
-  <meta name="description" content="Personal academic website (static).">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <div class="container">
     <header class="site-header">
       <div class="brand">
-        <div class="name" style="font-weight: 500; font-size: 1.2rem;">Ahmad Alqaisi</div>
+        <a href="/" style="color: var(--muted); text-decoration: none;">Ahmad Alqaisi</a>
       </div>
       <nav class="nav">
         <a href="#home">Home</a>
@@ -22,37 +21,37 @@
     </header>
 
     <main>
-      <section id="home" class="card">
+      <section id="home">
+        <h1>Ahmad Alqaisi</h1>
+        <hr>
+        
         <div class="profile">
-          <img src="assets/avatar.jpg" alt="Ahmad Alqaisi" class="avatar-small"/>
+          <img src="assets/avatar.jpg" alt="Ahmad Alqaisi"/>
           
           <div class="bio-text">
-            <h1>Ahmad Alqaisi</h1>
-            <p><strong>Physics PhD student at Indiana University</strong></p>
-            <p>PhD student specializing in Neutrino Physics and Photon Detection System.</p>
+            <p>I am a PhD student (since 202X) at the <a href="#">Department of Physics</a> at <a href="#">Indiana University</a>, advised by Prof. [Advisor Name].</p>
             
-            <div class="actions" style="margin-top: 20px;">
-              <a class="btn" href="#research">Research</a>
-              <a class="btn" href="#teaching">Teaching</a>
-              <a class="btn" href="assets/cv.pdf" target="_blank">Download CV</a>
-            </div>
+            <p>Currently I am involved in <strong>DUNE</strong> (Deep Underground Neutrino Experiment). Specifically, I work on the Photon Detection Systems (PDS). My interests are mainly in data analysis, simulation, as well as hardware work.</p>
+            
+            <p>Prior to Indiana University, I obtained my degree from [Previous University]. (<a href="assets/cv.pdf" target="_blank">Download my CV</a>)</p>
           </div>
         </div>
       </section>
 
-      <section id="research" class="card">
-        <h2>Research</h2>
-        <p>Neutrino Oscillations.
-           Photon Detection Systems for DUNE.
-        </p>
+      <section id="updates">
+        <h2>Updates</h2>
+        <hr>
+        <ul class="updates-list">
+          <li><span class="date">[Jan 29, 2026]</span> I made a <a href="#">presentation</a> regarding my latest research on Photon Detection.</li>
+          <li><span class="date">[Dec 11, 2025]</span> Traveled to Fermilab for the DUNE collaboration meeting.</li>
+          <li><span class="date">[Sep 05, 2025]</span> Our paper on Scintillators was accepted for publication.</li>
+        </ul>
       </section>
     </main>
 
-    <footer class="site-footer" style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; color: var(--muted); font-size: 14px;">
+    <footer class="site-footer">
       Built from scratch. © 2026 Ahmad Alqaisi
     </footer>
   </div>
-
-  <script src="scripts/main.js"></script>
 </body>
 </html>
