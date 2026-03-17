@@ -1,8 +1,109 @@
-:root{--bg:#0f1720;--muted:#9aa4b2;--accent:#4f46e5}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#071022;color:#e6eef8}
-.container{max-width:900px;margin:36px auto;padding:20px}
-.site-header{display:flex;justify-content:space-between}
-.avatar{width:64px;height:64px;border-radius:8px}
-.card{padding:18px;margin-top:18px;background:#0b1220;border-radius:12px}
-.btn{padding:8px 12px;border:1px solid #333;color:#ccc;text-decoration:none}
+:root {
+  --text: #222;
+  --muted: #666;
+  --link: #1a73e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.site-header a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+/* Profile section */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+/* Remove dark card look */
+.card {
+  margin-top: 30px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 40px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Links instead of buttons */
+a {
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button → link style (if still used) */
+.btn {
+  padding: 0;
+  border: none;
+  color: var(--link);
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+/* Optional: layout for image + text like the example */
+.profile {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 250px;
+}
