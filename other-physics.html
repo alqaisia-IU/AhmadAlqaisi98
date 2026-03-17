@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Other Physics Fields — Ahmad Alqaisi</title>
+  <title>Other Fields — Ahmad Alqaisi</title>
   <link rel="stylesheet" href="styles/styles.css">
   <style>
-    /* Consistent Pill Nav */
     .site-header { display: flex; justify-content: center; padding: 2.5rem 0; }
     .nav {
       display: flex; align-items: center; gap: 15px; background-color: #f8f9fa;
@@ -15,23 +14,14 @@
     }
     .nav a { text-decoration: none; color: #555; font-weight: 500; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
     .nav a:hover { background-color: #fff; color: #000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .nav .active { background-color: #fff; color: #000; font-weight: 600; }
+    .nav .active { background-color: #fff; color: #000; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     .nav-name { font-weight: 700 !important; color: #333 !important; border-right: 1px solid #ddd; padding-right: 20px !important; border-radius: 0 !important; }
 
     /* Grid for 2 Images */
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
+    .image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
     .image-grid img { width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-    .updates-list { padding-left: 0; list-style: none; }
-    .updates-list li { margin-bottom: 0.8rem; }
 
-    @media (max-width: 600px) {
-      .image-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 600px) { .image-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -42,48 +32,34 @@
         <a href="index.html">Home</a>
         <a href="HEP-research.html">Research</a>
         <a href="other-physics.html" class="active">Other Fields</a>
+        <a href="blog.html">Blog</a>
       </nav>
     </header>
 
     <main>
       <h1>Other Physics Fields</h1>
-      <p>Research in materials science, microscopy, and computational modeling.</p>
       <hr>
 
       <section id="biophysics">
         <h2>Biophysics and Microscopy</h2>
-        <p>My work focuses on biological systems and high-resolution imaging techniques.</p>
-        
+        <p>My previous work focused on utilizing high-resolution microscopy to study biological systems.</p>
         <div class="image-grid">
-          <img src="assets/microscopy-1.jpg" alt="Microscopy Result 1"/>
-          <img src="assets/microscopy-2.jpg" alt="Microscopy Result 2"/>
+          <img src="assets/bio1.jpg" alt="Biophysics 1"/>
+          <img src="assets/bio2.jpg" alt="Biophysics 2"/>
         </div>
-
-        <ul class="updates-list">
-          <li><strong>Advanced Imaging:</strong> Electron microscopy and optical techniques.</li>
-          <li><strong>Instrumentation:</strong> Calibrating sensitive measurement tools.</li>
-        </ul>
       </section>
 
-      <br>
-
-      <section id="computational-materials">
+      <section id="materials">
         <h2>Computational Materials Science</h2>
-        <p>Utilizing computational tools to analyze materials at atomic scales.</p>
-
+        <p>Research involved molecular dynamics simulations and DFT calculations to predict material properties.</p>
         <div class="image-grid">
-          <img src="assets/simulation-1.jpg" alt="MD Simulation"/>
-          <img src="assets/dft-plot.jpg" alt="DFT Calculation"/>
+          <img src="assets/mat1.jpg" alt="Materials 1"/>
+          <img src="assets/mat2.jpg" alt="Materials 2"/>
         </div>
-
-        <ul class="updates-list">
-          <li><strong>Molecular Dynamics:</strong> Simulating properties under thermodynamic conditions.</li>
-          <li><strong>HPC:</strong> Utilizing Python and high-performance computing.</li>
-        </ul>
       </section>
     </main>
     
-    <footer style="margin-top: 3rem; padding-bottom: 2rem;">
+    <footer style="margin-top: 4rem; padding-bottom: 2rem; text-align: left;">
         <hr>
         <p style="font-size: 0.8rem; color: #888;">© 2026 Ahmad Alqaisi</p>
     </footer>
