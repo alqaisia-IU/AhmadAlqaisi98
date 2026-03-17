@@ -15,17 +15,16 @@
     }
     .nav a { text-decoration: none; color: #555; font-weight: 500; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
     .nav a:hover { background-color: #fff; color: #000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .nav .active { background-color: #fff; color: #000; font-weight: 600; }
+    .nav .active { background-color: #fff; color: #000; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     .nav-name { font-weight: 700 !important; color: #333 !important; border-right: 1px solid #ddd; padding-right: 20px !important; border-radius: 0 !important; }
 
-    /* Research Layout: Image Left, Text Right */
-    .research-item { display: flex; gap: 2.5rem; margin: 2rem 0; align-items: flex-start; }
-    .research-item img { width: 300px; border-radius: 8px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .updates-list { padding-left: 0; list-style: none; margin-top: 1rem; }
-    .updates-list li { margin-bottom: 0.8rem; }
-
+    /* Layout: Image Left, Text Right */
+    .research-item { display: flex; gap: 2.5rem; margin: 2.5rem 0; align-items: flex-start; }
+    .research-item img { width: 320px; border-radius: 8px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .research-text { flex: 1; text-align: left; }
+    
     @media (max-width: 850px) {
-      .research-item { flex-direction: column; align-items: center; }
+      .research-item { flex-direction: column; align-items: center; text-align: center; }
       .research-item img { width: 100%; }
     }
   </style>
@@ -38,44 +37,38 @@
         <a href="index.html">Home</a>
         <a href="HEP-research.html" class="active">Research</a>
         <a href="other-physics.html">Other Fields</a>
+        <a href="blog.html">Blog</a>
       </nav>
     </header>
 
     <main>
       <h1>High Energy Physics Research</h1>
-      <p>My current research focuses on experimental neutrino physics and the DUNE collaboration.</p>
       <hr>
 
       <section id="dune">
         <h2>DUNE (Deep Underground Neutrino Experiment)</h2>
         <div class="research-item">
-          <img src="assets/dune-detector.jpg" alt="DUNE Detector Concept"/>
+          <img src="assets/hep1.jpg" alt="DUNE Research Image"/>
           <div class="research-text">
-            <p>As a PhD student at Indiana University, I am a member of the DUNE collaboration. This experiment aims to study neutrino oscillations and search for proton decay.</p>
-            <ul class="updates-list">
-              <li><strong>Collaboration:</strong> Working under Prof. Jon Urheim.</li>
-              <li><strong>Objective:</strong> Enhancing energy resolution using scintillation light.</li>
-            </ul>
+            <p>I am a member of the DUNE collaboration, focusing on neutrino oscillations and the search for CP violation in the lepton sector.</p>
+            <p>My work involves the simulation and hardware testing of Photon Detection Systems to improve the energy reconstruction of neutrino interactions.</p>
           </div>
         </div>
       </section>
 
-      <section id="protodune-vd">
-        <h2>ProtoDUNE Vertical Drift (VD)</h2>
+      <section id="protodune">
+        <h2>ProtoDUNE Vertical Drift</h2>
         <div class="research-item">
-          <img src="assets/pds-system.jpg" alt="PDS System"/>
+          <img src="assets/hep2.jpg" alt="ProtoDUNE Research Image"/>
           <div class="research-text">
-            <p>My primary focus is on the <strong>Photon Detection System (PDS)</strong> for the ProtoDUNE Vertical Drift detector at CERN.</p>
-            <ul class="updates-list">
-              <li><strong>Hardware:</strong> Testing X-ARAPUCA photon collectors.</li>
-              <li><strong>Analysis:</strong> Optimizing reconstruction of neutrino events in LAr.</li>
-            </ul>
+            <p>At CERN, I contribute to the ProtoDUNE Vertical Drift effort, focusing on the installation and commissioning of the Photon Detection modules.</p>
+            <p>This includes analyzing the light yield and timing resolution of the X-ARAPUCA collectors in a liquid argon environment.</p>
           </div>
         </div>
       </section>
     </main>
     
-    <footer style="margin-top: 3rem; padding-bottom: 2rem;">
+    <footer style="margin-top: 4rem; padding-bottom: 2rem; text-align: left;">
         <hr>
         <p style="font-size: 0.8rem; color: #888;">© 2026 Ahmad Alqaisi</p>
     </footer>
