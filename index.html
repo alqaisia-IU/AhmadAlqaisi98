@@ -6,39 +6,70 @@
   <title>Ahmad Alqaisi — Personal website</title>
   <link rel="stylesheet" href="styles/styles.css">
   <style>
-    /* Inline styles to ensure the specific layout requests are met immediately */
+    /* Centering the Header Tabs */
     .site-header {
       display: flex;
-      justify-content: flex-end; /* Pushes everything to the right like the image */
+      justify-content: center; /* This centers the navigation bar */
       align-items: center;
-      padding: 1rem 0;
+      padding: 2rem 0;
     }
+
     .nav {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       align-items: center;
     }
+
     .nav-name {
-      margin-right: 30px;
+      font-weight: bold;
+      margin-right: 20px;
       color: var(--muted);
       text-decoration: none;
     }
+
+    /* Profile Layout: Text to the right of the image */
     .profile {
-      display: flex; /* Makes text go to the right of the picture */
+      display: flex;
       align-items: flex-start;
-      gap: 2rem;
-      margin-top: 2rem;
+      gap: 2.5rem;
+      margin: 2rem 0;
     }
+
     .profile img {
-      width: 200px; /* Adjust size as needed */
+      width: 220px;
+      height: auto;
       border-radius: 4px;
+      flex-shrink: 0; /* Prevents the image from squeezing */
     }
+
+    /* Spacing for Education Rows */
     .education-entry {
-      margin-bottom: 1.5rem; /* Creates the space between rows */
+      margin-bottom: 1.5rem; 
     }
-    @media (max-width: 600px) {
-      .profile { flex-direction: column; }
-      .site-header { justify-content: center; }
+
+    /* Spacing for News Rows */
+    .updates-list li {
+      margin-bottom: 1.2rem; /* Adds the space between news items */
+      list-style-type: none; /* Optional: cleaner look without bullets */
+    }
+
+    .date {
+      font-weight: 500;
+      margin-right: 8px;
+    }
+
+    /* Responsive fix for mobile */
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
     }
   </style>
 </head>
@@ -76,16 +107,13 @@
       <section id="education">
         <h2>Education</h2>
         <hr>
-        
         <div class="education-entry">
-          <strong>PhD in Physics</strong> <br>
-          Indiana University, Bloomington <br>
+          <strong>PhD in Physics</strong> — Indiana University, Bloomington <br>
           <span class="date">Jan 2024 — Present</span>
         </div>
 
         <div class="education-entry">
-          <strong>MS in Materials Science and Engineering</strong> <br>
-          Arizona State University <br>
+          <strong>MS in Materials Science and Engineering</strong> — Arizona State University <br>
           <span class="date">Aug 2021 — May 2023</span>
         </div>
       </section>
@@ -100,7 +128,7 @@
       </section>
     </main>
 
-    <footer style="margin-top: 3rem; padding-bottom: 2rem;">
+    <footer style="margin-top: 4rem; padding-bottom: 2rem; text-align: center;">
         <hr>
         <p style="font-size: 0.8rem; color: var(--muted);">© 2026 Ahmad Alqaisi</p>
     </footer>
