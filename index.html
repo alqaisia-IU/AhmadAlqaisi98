@@ -6,90 +6,32 @@
   <title>Ahmad Alqaisi — Personal website</title>
   <link rel="stylesheet" href="styles/styles.css">
   <style>
-    /* Designed Navigation Bar */
-    .site-header {
-      display: flex;
-      justify-content: center;
-      padding: 2.5rem 0;
-    }
-
+    /* Global layout & Pill Navigation */
+    .site-header { display: flex; justify-content: center; padding: 2.5rem 0; }
     .nav {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background-color: #f8f9fa; /* Light grey bar */
-      padding: 10px 30px;
-      border-radius: 50px; /* Pill shape */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow */
+      display: flex; align-items: center; gap: 15px; background-color: #f8f9fa;
+      padding: 10px 30px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       border: 1px solid #eee;
     }
+    .nav a { text-decoration: none; color: #555; font-weight: 500; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
+    .nav a:hover { background-color: #fff; color: #000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .nav .active { background-color: #fff; color: #000; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .nav-name { font-weight: 700 !important; color: #333 !important; border-right: 1px solid #ddd; padding-right: 20px !important; border-radius: 0 !important; }
 
-    .nav a {
-      text-decoration: none;
-      color: #555;
-      font-weight: 500;
-      padding: 8px 15px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
+    /* Profile: Image Left, Text Right */
+    .profile { display: flex; align-items: flex-start; gap: 2.5rem; margin: 2rem 0; }
+    .profile img { width: 220px; border-radius: 8px; flex-shrink: 0; }
+    
+    /* Education & News Spacing */
+    .education-entry { margin-bottom: 1.5rem; }
+    .updates-list { padding-left: 0; list-style: none; margin-left: 0; }
+    .updates-list li { margin-bottom: 1.2rem; text-align: left; }
+    .date { font-weight: 600; color: #666; margin-right: 10px; }
 
-    .nav a:hover {
-      background-color: #fff;
-      color: #000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .nav-name {
-      font-weight: 700 !important;
-      color: #333 !important;
-      border-right: 1px solid #ddd;
-      padding-right: 20px !important;
-      border-radius: 0 !important;
-    }
-
-    /* Profile Layout */
-    .profile {
-      display: flex;
-      align-items: flex-start;
-      gap: 2.5rem;
-      margin: 2rem 0;
-    }
-
-    .profile img {
-      width: 220px;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-
-    /* Education Spacing */
-    .education-entry {
-      margin-bottom: 1.5rem;
-    }
-
-    /* Left-Aligned News Section */
-    .updates-list {
-      padding-left: 0; /* Removes default indentation */
-      margin-left: 0;
-      list-style: none; /* Removes bullets for a cleaner left-align */
-      text-align: left;
-    }
-
-    .updates-list li {
-      margin-bottom: 1.2rem;
-      text-align: left; /* Ensures text stays left */
-    }
-
-    .date {
-      font-weight: 600;
-      color: #666;
-      margin-right: 10px;
-    }
-
-    /* Mobile view adjustments */
     @media (max-width: 768px) {
       .profile { flex-direction: column; align-items: center; text-align: center; }
       .nav { padding: 10px 15px; gap: 5px; flex-wrap: wrap; justify-content: center; }
-      .nav-name { border-right: none; padding-right: 8px !important; }
+      .nav-name { border-right: none; padding-right: 10px !important; }
     }
   </style>
 </head>
@@ -98,9 +40,10 @@
     <header class="site-header">
       <nav class="nav">
         <a href="index.html" class="nav-name">Ahmad Alqaisi</a>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="HEP-research.html">Research</a>
         <a href="other-physics.html">Other Fields</a>
+        <a href="blog.html">Blog</a>
       </nav>
     </header>
 
@@ -108,7 +51,6 @@
       <section id="home">
         <h1>Ahmad Alqaisi</h1>
         <hr>
-        
         <div class="profile">
           <img src="assets/avatar2.jpg" alt="Ahmad Alqaisi"/>
           <div class="bio-text">
