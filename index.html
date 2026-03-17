@@ -5,16 +5,50 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ahmad Alqaisi — Personal website</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    /* Inline styles to ensure the specific layout requests are met immediately */
+    .site-header {
+      display: flex;
+      justify-content: flex-end; /* Pushes everything to the right like the image */
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-name {
+      margin-right: 30px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .profile {
+      display: flex; /* Makes text go to the right of the picture */
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .profile img {
+      width: 200px; /* Adjust size as needed */
+      border-radius: 4px;
+    }
+    .education-entry {
+      margin-bottom: 1.5rem; /* Creates the space between rows */
+    }
+    @media (max-width: 600px) {
+      .profile { flex-direction: column; }
+      .site-header { justify-content: center; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <header class="site-header">
-      <div class="brand">
-        <a href="/" style="color: var(--muted); text-decoration: none;">Ahmad Alqaisi</a>
-      </div>
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="HEP-research.html">HEP Research</a>
+        <a href="index.html" class="nav-name">Ahmad Alqaisi</a>
+        <a href="index.html">Home</a>
+        <a href="HEP-research.html">Research</a>
         <a href="other-physics.html">Other Fields</a>
       </nav>
     </header>
@@ -32,10 +66,27 @@
             
             <p>Currently I am involved in <strong>DUNE</strong> (Deep Underground Neutrino Experiment). Specifically, I work on Photon Detection Systems (PDS) in the ProtoDUNE Vertical Drift Detector.</p>
             
-            <p>Prior to Indiana University, I obtained a master's degree in materials science and engineering from Arizona State University, <a href="https://semte.engineering.asu.edu/research/materials-science-and-engineering/">Materials Science and Engineering department</a> (May 2023).</p> <!-- create new line -->   
+            <p>Prior to Indiana University, I obtained a master's degree in materials science and engineering from Arizona State University, <a href="https://semte.engineering.asu.edu/research/materials-science-and-engineering/">Materials Science and Engineering department</a> (May 2023).</p> 
               
             <p><a href="assets/cv.pdf" target="_blank">Download my CV</a></p>
           </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <hr>
+        
+        <div class="education-entry">
+          <strong>PhD in Physics</strong> <br>
+          Indiana University, Bloomington <br>
+          <span class="date">Jan 2024 — Present</span>
+        </div>
+
+        <div class="education-entry">
+          <strong>MS in Materials Science and Engineering</strong> <br>
+          Arizona State University <br>
+          <span class="date">Aug 2021 — May 2023</span>
         </div>
       </section>
 
@@ -48,6 +99,11 @@
         </ul>
       </section>
     </main>
-    </div>
+
+    <footer style="margin-top: 3rem; padding-bottom: 2rem;">
+        <hr>
+        <p style="font-size: 0.8rem; color: var(--muted);">© 2026 Ahmad Alqaisi</p>
+    </footer>
+  </div>
 </body>
 </html>
