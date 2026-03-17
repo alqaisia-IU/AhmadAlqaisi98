@@ -5,58 +5,79 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HEP Research — Ahmad Alqaisi</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    /* Reuse consistent Pill Nav */
+    .site-header { display: flex; justify-content: center; padding: 2.5rem 0; }
+    .nav {
+      display: flex; align-items: center; gap: 15px; background-color: #f8f9fa;
+      padding: 10px 30px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eee;
+    }
+    .nav a { text-decoration: none; color: #555; font-weight: 500; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
+    .nav a:hover { background-color: #fff; color: #000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .nav .active { background-color: #fff; color: #000; font-weight: 600; }
+    .nav-name { font-weight: 700 !important; color: #333 !important; border-right: 1px solid #ddd; padding-right: 20px !important; border-radius: 0 !important; }
+
+    /* Research Layout: Image Left, Text Right */
+    .research-item { display: flex; gap: 2.5rem; margin: 2rem 0; align-items: flex-start; }
+    .research-item img { width: 300px; border-radius: 8px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .updates-list { padding-left: 0; list-style: none; margin-top: 1rem; }
+    .updates-list li { margin-bottom: 0.8rem; }
+
+    @media (max-width: 850px) {
+      .research-item { flex-direction: column; align-items: center; }
+      .research-item img { width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <header class="site-header">
-      <div class="brand">
-        <a href="index.html" style="color: var(--muted); text-decoration: none;">Ahmad Alqaisi</a>
-      </div>
       <nav class="nav">
-        <a href="index.html#home">Home</a>
-        <a href="HEP-research.html" class="active">HEP Research</a>
+        <a href="index.html" class="nav-name">Ahmad Alqaisi</a>
+        <a href="index.html">Home</a>
+        <a href="HEP-research.html" class="active">Research</a>
         <a href="other-physics.html">Other Fields</a>
       </nav>
     </header>
 
     <main>
       <h1>High Energy Physics Research</h1>
-      <p>My current research focuses on experimental neutrino physics, contributing to the next generation of deep underground detectors designed to unravel the mysteries of the universe.</p>
+      <p>My current research focuses on experimental neutrino physics and the DUNE collaboration.</p>
       <hr>
 
       <section id="dune">
         <h2>DUNE (Deep Underground Neutrino Experiment)</h2>
         <div class="research-item">
-          <p>
-            As a PhD student at Indiana University, I am a member of the DUNE collaboration. This international flagship experiment aims to study neutrino oscillations, search for proton decay, and observe neutrinos from supernovae to understand the matter-antimatter asymmetry in the universe.
-          </p>
-          <ul class="updates-list">
-            <li><strong>Collaboration:</strong> Working under the supervision of Prof. Jon Urheim within the DUNE Photon Detection System (PDS) consortium.</li>
-            <li><strong>Objective:</strong> Enhancing the energy resolution and timing of neutrino interaction events using scintillation light.</li>
-          </ul>
+          <img src="assets/dune-detector.jpg" alt="DUNE Detector Concept"/>
+          <div class="research-text">
+            <p>As a PhD student at Indiana University, I am a member of the DUNE collaboration. This experiment aims to study neutrino oscillations and search for proton decay.</p>
+            <ul class="updates-list">
+              <li><strong>Collaboration:</strong> Working under Prof. Jon Urheim.</li>
+              <li><strong>Objective:</strong> Enhancing energy resolution using scintillation light.</li>
+            </ul>
+          </div>
         </div>
       </section>
-
-      <br>
 
       <section id="protodune-vd">
         <h2>ProtoDUNE Vertical Drift (VD)</h2>
         <div class="research-item">
-          <p>
-            My primary technical focus is on the <strong>Photon Detection System (PDS)</strong> for the ProtoDUNE Vertical Drift detector. This large-scale prototype at CERN validates the technology for the full-scale DUNE Far Detector modules.
-          </p>
-          <ul class="updates-list">
-            <li><strong>Hardware Integration:</strong> Involved in the development and testing of photon collectors (such as X-ARAPUCAs) for detecting 128nm scintillation light in Liquid Argon (LAr).</li>
-            <li><strong>Vertical Drift Technology:</strong> Studying the unique challenges of placing PDS components on the cathode and cryostat membranes in a high-voltage environment.</li>
-            <li><strong>Data Analysis:</strong> Analyzing detector performance and light yield to optimize the reconstruction of neutrino events.</li>
-          </ul>
+          <img src="assets/pds-system.jpg" alt="PDS System"/>
+          <div class="research-text">
+            <p>My primary focus is on the <strong>Photon Detection System (PDS)</strong> for the ProtoDUNE Vertical Drift detector at CERN.</p>
+            <ul class="updates-list">
+              <li><strong>Hardware:</strong> Testing X-ARAPUCA photon collectors.</li>
+              <li><strong>Analysis:</strong> Optimizing reconstruction of neutrino events in LAr.</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
     
     <footer style="margin-top: 3rem; padding-bottom: 2rem;">
         <hr>
-        <p style="font-size: 0.8rem; color: var(--muted);">© 2026 Ahmad Alqaisi</p>
+        <p style="font-size: 0.8rem; color: #888;">© 2026 Ahmad Alqaisi</p>
     </footer>
   </div>
 </body>
