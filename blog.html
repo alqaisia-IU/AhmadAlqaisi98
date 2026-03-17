@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog — Ahmad Alqaisi</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    .site-header { display: flex; justify-content: center; padding: 2.5rem 0; }
+    .nav {
+      display: flex; align-items: center; gap: 15px; background-color: #f8f9fa;
+      padding: 10px 30px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eee;
+    }
+    .nav a { text-decoration: none; color: #555; font-weight: 500; padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
+    .nav a:hover { background-color: #fff; color: #000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .nav .active { background-color: #fff; color: #000; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .nav-name { font-weight: 700 !important; color: #333 !important; border-right: 1px solid #ddd; padding-right: 20px !important; border-radius: 0 !important; }
+
+    .blog-post { margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid #f0f0f0; }
+    .post-date { font-size: 0.85rem; color: #888; }
+    .blog-post h2 a { text-decoration: none; color: #222; transition: 0.2s; }
+    .blog-post h2 a:hover { color: #800000; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <nav class="nav">
+        <a href="index.html" class="nav-name">Ahmad Alqaisi</a>
+        <a href="index.html">Home</a>
+        <a href="HEP-research.html">Research</a>
+        <a href="other-physics.html">Other Fields</a>
+        <a href="blog.html" class="active">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Blog</h1>
+      <p>Thoughts on physics, research, and life in academia.</p>
+      <hr>
+
+      <article class="blog-post">
+        <span class="post-date">March 10, 2026</span>
+        <h2><a href="#">The Impact of Photon Detection in DUNE</a></h2>
+        <p>A brief look at how vertical drift technology is enhancing our ability to see light in LArTPCs...</p>
+      </article>
+
+      <article class="blog-post">
+        <span class="post-date">February 15, 2026</span>
+        <h2><a href="#">Materials Science to Neutrinos: My Journey</a></h2>
+        <p>Reflecting on the transition from engineering-focused materials research to fundamental high-energy physics...</p>
+      </article>
+    </main>
+
+    <footer style="margin-top: 4rem; padding-bottom: 2rem; text-align: left;">
+        <hr>
+        <p style="font-size: 0.8rem; color: #888;">© 2026 Ahmad Alqaisi</p>
+    </footer>
+  </div>
+</body>
+</html>
