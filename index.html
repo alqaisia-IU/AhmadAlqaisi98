@@ -3,19 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ahmad Alqaisi— Personal website</title>
+  <title>Ahmad Alqaisi — Personal website</title>
   <meta name="description" content="Personal academic website (static).">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <header class="site-header">
       <div class="brand">
-        <img src="assets/avatar.jpg" alt="avatar" class="avatar"/>
-        <div class="who">
-          <div class="name">Ahmad Alqaisi</div>
-          <div class="role">Physics PhD student at Indiana University</div>
-        </div>
+        <div class="name" style="font-weight: 500; font-size: 1.2rem;">Ahmad Alqaisi</div>
       </div>
       <nav class="nav">
         <a href="#home">Home</a>
@@ -27,18 +23,31 @@
 
     <main>
       <section id="home" class="card">
-        <h1>Your Name</h1>
-        <p class="lead">Short one-line bio.</p>
-        <div class="actions">
-          <a class="btn" href="#research">Research</a>
-          <a class="btn" href="#teaching">Teaching</a>
-          <a class="btn" href="assets/cv.pdf" target="_blank">Download CV</a>
+        <div class="profile">
+          <img src="assets/avatar.jpg" alt="Ahmad Alqaisi" class="avatar-large"/>
+          
+          <div class="bio-text">
+            <h1>Ahmad Alqaisi</h1>
+            <p><strong>Physics PhD student at Indiana University</strong></p>
+            <p>Short one-line bio or a brief introduction about your research interests and academic background.</p>
+            
+            <div class="actions" style="margin-top: 20px;">
+              <a class="btn" href="#research">Research</a>
+              <a class="btn" href="#teaching">Teaching</a>
+              <a class="btn" href="assets/cv.pdf" target="_blank">Download CV</a>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section id="research" class="card">
+        <h2>Research</h2>
+        <p>Details about your physics research at Indiana University go here.</p>
       </section>
     </main>
 
-    <footer class="site-footer">
-      Built from scratch.
+    <footer class="site-footer" style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; color: var(--muted); font-size: 14px;">
+      Built from scratch. © 2026 Ahmad Alqaisi
     </footer>
   </div>
 
